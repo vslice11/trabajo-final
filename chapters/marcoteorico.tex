@@ -1,0 +1,298 @@
+\section{Descripción de las tecnologías, metodologías a utilizar
+en el proyecto}
+
+\subsection{Metodología a emplear}
+
+Para realizar el monitoreo de los servidores se han tomado como
+referencia dos programas de monitoreo de servidores las cuales fueron Nagios y Zenoss.
+
+Nagios y Zenoss poseen características parecidas, al final del
+estudio se decidió utilizar Zenoss como herramienta de monitoreo debido a experiencia
+previa con este. A continuación listamos algunas
+
+diferencias.
+
+\subsection{Síntesis de las tecnologías a utilizar}
+
+Una de las preguntas más comunes de los usuarios de software abierto
+es la diferencia entre Zenoss y Nagios. Aunque Nagios tiene una de las
+mayores bases instaladas de cualquier solución de monitoreo está
+es una pregunta lógica pero Zenoss tiene una serie de características
+que lo diferencian de Nagios. Nagios es básicamente un planificador
+que ejecuta comprobaciones de mantenimiento y pruebas contra los
+dispositivos de red y los reportes regresan los resultados. Nagios
+también tienen una lista completa de extensiones o plugins que son
+similar a los plugins de Zenoss. Así que es posible utilizar los
+plugins de Nagios en Zenoss, ya que proporciona la capacidad de
+ejecutarlos.
+
+\begin{itemize}
+\item \textbf{Descubrimiento automático} - Zenoss puede descubrir
+  automáticamente hosts y iniciar a monitorizar de forma
+  automática. Nagios requiere que se introduzca de forma manual en
+  un archivo de configuración.
+\item \textbf{Monitoreo de Rendimiento} - Zenoss puede generar gráficos de
+  series de tiempo del rendimiento. Nagios no puede sin plugins
+  adicionales o software. A menudo los usuarios utilizan el motor
+  gráfico popular llamado Cacti, que aprovecha RRDTool para
+  recopilar datos de series de tiempo.
+\item \textbf{Gestión de Eventos} - Zenoss puede normalizar los
+  datos dentro de eventos, más allá de la colección desde otra
+  fuente y deduplicación los eventos almacenan las ocurrencias en un
+  contador el cual permite a los usuarios configurar alertas basadas en
+  la frecuencias de una alerta.
+\item \textbf{Monitoreo de Logs del sistema} - Zenoss puede monitorear
+  los registros del sistema Unix, Linux, Windows y más. En adición
+  Zenoss puede ser utilizado para traducir los datos dentro de los
+  evento y normalizarlos junto con la disponibilidad y rendimiento
+  recopilados a través de otros métodos como SNMP y SSH.
+\item \textbf{Alertas sofisticadas} - Las alertas de Nagios se pueden
+  enviar a una dirección de correo electrónico o a un localizado
+  basado en ciertas condiciones. Sin embargo, Zenoss tiene un sistema
+  de alerta más robusto, donde las alertas pueden enviarse a una
+  sola persona o a un grupo de individuos. El escalamiento de reglas
+  puede hacerse cumplir de manera que cuando una alertas van sin
+  reconocimiento, puedan ser promovidas a otro operador de red.
+\end{itemize}
+
+\subsubsection{Nagios}
+
+Nagios es un sistema de monitorización de redes ampliamente utilizado, de código abierto, que vigila los equipos (hardware) y servicios (software) que se especifiquen, alertando cuando el comportamiento de los mismos no sea el deseado. Entre sus características principales figuran la monitorización de servicios de red (SMTP, POP3, HTTP, SNMP...), la monitorización de los recursos de sistemas hardware (carga del procesador, uso de los discos, memoria, estado de los puertos...), independencia de sistemas operativos, posibilidad de monitorización remota mediante túneles SSL cifrados o SSH, y la posibilidad de programar plugins específicos para nuevos sistemas.
+
+Se trata de un software que proporciona una gran versatilidad para consultar prácticamente cualquier parámetro de interés de un sistema, y genera alertas, que pueden ser recibidas por los responsables correspondientes mediante (entre otros medios) correo electrónico y mensajes SMS, cuando estos parámetros exceden de los márgenes definidos por el administrador de red.
+
+Llamado originalmente Netsaint, nombre que se debió cambiar por coincidencia con otra marca comercial, fue creado y es actualmente mantenido por Ethan Galstad, junto con un grupo de desarrolladores de software que mantienen también varios complementos.
+
+Nagios fue originalmente diseñado para ser ejecutado en GNU/Linux, pero también se ejecuta bien en variantes de Unix.
+
+Nagios está licenciado bajo la GNU General Public License Version 2
+publicada por la Free Software Foundation.
+
+\subsubsection{Características de Nagios}
+
+\begin{itemize}
+\item Monitorización de servicios de red (SMTP, POP3, HTTP, NNTP, ICMP, SNMP).
+\item Monitorización de los recursos de equipos hardware (carga del procesador, uso de los discos, logs del sistema) en varios sistemas operativos, incluso Microsoft Windows con los plugins NRPE\_NT o \texttt{NSClient++}.
+\item Monitorización remota, a través de túneles SSL cifrados o SSH.
+\item Diseño simple de plugins, que permiten a los usuarios desarrollar sus propios chequeos de servicios dependiendo de sus necesidades, usando sus herramientas preferidas (Bash, \texttt{C++}, Perl, Ruby, Python, PHP, C\#$\ldots$).
+\item Chequeo de servicios paralizados.
+\item Posibilidad de definir la jerarquía de la red, permitiendo distinguir entre host caídos y host inaccesibles.
+\item Notificaciones a los contactos cuando ocurren problemas en servicios o hosts, así como cuando son resueltos (a través del correo electrónico, busca personas, Jabber, SMS, o cualquier método definido por el usuario junto con su correspondiente complemento).
+\item Posibilidad de definir manejadores de eventos que ejecuten al ocurrir un evento de un servicio o host para resoluciones de problemas proactivas.
+\item Rotación automática del archivo de registro.
+\item Soporte para implementar hosts de monitores redundantes.
+\item Visualización del estado de la red en tiempo real a través de interfaz web, con la posibilidad de generar informes y gráficas de comportamiento de los sistemas monitorizados, y visualización del listado de notificaciones enviadas, historial de problemas, archivos de registros$\ldots$
+\end{itemize}
+
+\pagebreak
+
+\subsubsection{Zenoss Core}
+
+Zenoss Core es un software abierto, una plataforma de monitoreo de red
+y sistema que es patrocinado por Zenoss, Inc. la cual desarrolla dos
+versiones de Zenoss: Core y Enterprise. Core pertenece a la comunidad
+y es desarrolla por la comunidad. \\
+Zenoss Enterprise añade algunas características de valor sobre la
+versión Core, tales como una librería extendida de reportes,
+transacciones web sintéticas, monitores certificados (ZenPacks), y
+un panel de administración para múltiples instalaciones de
+Zenoss. Las características adicionales permiten a Zenoss
+Inc. vender la versión Enterprise como un producto de software
+comercial con soporte.
+
+Zenoss Core es una solución de monitoreo que puede ser tan
+completa como se desee. Y mientras que casi cualquier
+persona puede instalarlo, correrlo, y monitorear un equipo, Zenoss Core
+se torna un poco complicado en ocasiones. La
+interfaz ha mejorado drásticamente en la versión 2, pero no es el
+tipo de software que se puede utilizar de forma intuitiva, un poco de
+orientación es necesaria.
+
+Zenoss Core provee una solución de monitoreo que incorpora los
+siguiente:
+\begin{itemize}
+\item Gestión de dispositivos
+\item Monitoreo de disponibilidad
+\item Gráficos de rendimiento
+\item Gestión de usuarios y alertas
+\item Arquitectura de plugins
+\item Informes de seguimiento
+\end{itemize}
+
+Para monitorear activos de Tecnología de información (Servidores,
+routers, switches, sitios web, y cualquier cosa conectada a la red),
+se debe instalar Zenoss Core en un servidor. A pesar que Zenoss Core
+está diseñado para ser instalado en un servidor Linux,
+aplicaciones virtuales están disponibles para permitir a los
+usuarios de Machintosh y Windows instalar Zenoss core utilizando
+VMware.
+
+Después de la instalación, usted puede manejar su instalación de
+Zenoss Core y su configuración de monitorización de una interfaz
+web. La siguiente imagen muestra la vista del panel: \\
+
+\includegraphics[width=\linewidth]{zenoss-dashboard}
+
+El portal web es la cara del sistema de Zenoss Core y es el lugar
+donde pasamos la mayor parte de nuestro tiempo. Este provee un único
+acceso para el sistema de monitoreo y no requiere saber acerca del
+sistema operativo. La interfaz web ofrecer arrastrar y soltar,
+portlets que muestra una vista personalizada de la red en cualquier
+punto.
+
+\subsubsection{Gestión de dispositivos}
+
+En el corazón de la gestión de dispositivos, Zenoss Core utiliza
+una Base de Datos de la Gestión de Configuración (CMDB), el cual
+almacena un modelo del entorno de TI a la CMDB de una en una o por
+auto-descubrimiento de dispositivos activos al recorrer la tabla de
+enrutamiento. Los dispositivos son gestionados a través  de
+protocolo simple de administración de red (SNMP), SSH (o Telnet), o
+escaneos de puertos.
+
+Zenoss Core permite organizar dispositivos por ubicaciones definidas
+por el usuario, grupos y sistemas. Uno de los más poderosos
+conceptos organizativos de Zenoss Core es clases, el cual permite
+definir las características de monitoreo basadas en una
+clasificación jerárquica de los dispositivos, lo que permite a un
+dispositivo a heredar las propiedades de seguimiento de su clase padre.
+
+La siguiente captura de pantalla ofrece un vistazo a una página de
+estado del dispositivo: \\
+
+\includegraphics[width=\linewidth]{zenoss-dmanagement}
+
+\subsubsection{Monitores de disponibilidad y rendimiento}
+
+Mediante el uso de la motorización ICMP y SNMP, Zenoss Core informa
+sobre la disponibilidad de los siguiente:
+
+\begin{itemize}
+\item Dispositivos de red
+\item Servicios y puerto TCP/IP
+\item Disponibilidad de URL
+\item Servicios y procesos de Windows
+\item Procesos de Linux\textbackslash{}UNIX
+\end{itemize}
+
+Zenoss Core está en el nivel 3 de la topología de red, lo cual
+reduce la cantidad de alertas mediante la creación de un evento
+solamente sobre el dispositivo problemático y no sobre los dispositivos
+que dependen de el.
+
+Monitores de rendimiento recopilan datos de series de tiempo y son
+proporcionados con un análisis gráfico de los siguientes
+componentes:
+
+\begin{itemize}
+\item Estadísticas del sistema de ficheros.
+\item Uso de CPU y memoria.
+\item Monitoreo de JMX para servidores J2EE (disponible a través de
+  un ZenPack).
+\item Soporte para plugins Nagios y Cacti.
+\end{itemize}
+
+La siguiente imagen muestra un gráfico basado en la
+actividad de monitoreo de Zenoss Core: \\
+
+\centerline{\includegraphics[scale=0.71]{zenoss-performance}}
+
+Utilizando el sistema de gestión de eventos incorporado, se puede
+configurar Zenoss Core para generar un evento si un dispositivo
+supervisado cruza un umbral definido.
+
+\subsubsection{Gestión de eventos}
+
+Zenoss Core monitorea una variedad de recursos en busca de problemas,
+incluyendo logs del sistema, disponibilidad y monitoreo de
+rendimiento, trampas SNMP, registros de eventos de Windows y scripts
+personalizados. Las características principales del sistema de
+gestión de eventos incluyen:
+
+\begin{itemize}
+\item Eventos personalizados
+\item Priorización automática de eventos
+\item Duplicación de eventos
+\item Correlación de eventos Arriba$\backslash$Abajo
+\end{itemize}
+
+La siguiente imagen muestra la \textbf{Consola de
+  Eventos:} \\
+
+\centerline{\includegraphics[scale=0.71]{zenoss-events}}
+
+El sistema de ventos mitiga eventos duplicados y borra automaticamente
+eventos cuando el estado de los eventos cambia de inactivo a
+activo. Zenoss Core también recopilar eventos de secuencias de
+comandos personalizadas y aplicaciones externas.
+En respuesta a los acontecimientos, Zenoss Core puede enviar correo
+electrónicos o paginas de alertas, correr un script o no hacer
+nada. Zenoss Core puede ser configurado para responder a un evento
+mediante la definición de reglas de alerta. Las reglas de alertas
+son definidas en base aun usuario o grupo de usuarios.
+
+\pagebreak
+
+\subsubsection{Arquitectura de plugins}
+
+Zenoss Core ofrece varias maneras para extender la funcionalidad base:
+
+\begin{itemize}
+\item ZenPacks: Zenoss Core complemento de módulos
+\item Plugins de Nagios
+\item Plugins de Cacti
+\end{itemize}
+
+La arquitectura ZenPack permite empaquetar plugins y configuraciones
+para su distribución a otros usuario y la comunidad en general.
+
+\subsubsection{Reportes del sistema}
+
+Zenoss Corre contiene un conjunto de reportes estándar que permiten
+ver que está sucediendo en este momento, así como lo que ha
+sucedido en el pasado. Los informes se integran con la gestión de
+dispositivos, monitores de rendimiento, eventos y funcionalidades de
+usuario.
+
+La siguiente imagen muestra el reporte de Todos los
+componentes monitoreados: \\
+
+\centerline{\includegraphics[scale=0.35]{zenoss-reports}}
+
+\subsubsection{Informes personalizados de dispositivos}
+
+Zenoss Core permite a los usuarios escribir informes personalizados de
+dispositivos en la interfaz web, como se ven en la siguiente captura
+de pantalla: \\
+
+\centerline{\includegraphics[scale=0.71]{zenoss-devices}}
+
+\clearpage
+
+\subsection{Cuadros comparativos}
+
+\begin{TAB}(r,5pt,5pt)[9pt]{|l|c|c|}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}% (rows,min,max)[tabcolsep]{columns}{rows}
+\textbf{Nombre}                     & Nagios & Zenoss \\
+\textbf{Gráficas}                   & Si     & Si     \\
+\textbf{Informes SLA}               & Si     & No     \\
+\textbf{Grupos Lógicos}             & Si     & Si     \\
+\textbf{Estadísticas}               & Si     & Si     \\
+\textbf{Predicción de estadísticas} & Si     & Si     \\
+\textbf{Autodescubrimiento}         & Si     & Si     \\
+\textbf{Agentes}                    & Si     & SNMP, WMI, IMX, etc. \\
+\textbf{SNMP}                       & A través de plugin & Si     \\
+\textbf{Syslog}                     & Si     & Si     \\
+\textbf{Scripts externos}           & Si     & Si     \\
+\textbf{Complementos (plugins)}     & Si     & Si     \\
+\textbf{Creación de complementos} & Media  & Fácil \\
+\textbf{Alertas}                    & Si     & Si      \\
+\textbf{Aplicación web}           & Solo virtualización & Control total \\
+\textbf{Monitorización distribuida} & Si & Si \\
+\textbf{Método de almacenaje de datos} & SQL & RRDtool y MySQL \\
+\textbf{Licencia}                   & GPL    & GPL      \\
+\end{TAB}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../virtualizacion"
+%%% End:

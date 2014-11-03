@@ -1,0 +1,142 @@
+-% -*-coding: utf-8 -*-
+%
+% Tesis de virtualizacion
+% Otubre 22 de 2014
+%
+% Original authors:
+% William Adonis Diaz Valdez
+% Carlos Ernesto Hernandez Granados
+% Cesar Augusto Viana
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%
+\begin{document}.
+\documentclass{utec-thesis}
+\pagenumbering{roman}
+
+\university{\textbf{Universidad Tecnológica de El Salvador}}
+\title{Análisis e interpretación de información de servidores seleccionados en la empresa Negocios Asociados S. A. para el estudio sobre la posibilidad de migración a un ambiente virtual utilizando tecnología Vmware en los nuevos servidores que serán adquiridos por la empresa con el fin de virtualizar.}
+
+\authors{
+  \begin{center}
+    \begin{TAB}(r,700ex,3ex){ll}{cccc}
+      \textbf{Integrantes} & \textbf{Carné}\\
+      William Adonis Díaz Valdez & 25-5700-2008\\
+      Carlos Ernesto Hernández Granados & 25-1242-2008\\
+      Cesar Augusto Viana & 25-4407-2007\\
+    \end{TAB}
+  \end{center}
+}
+
+
+\begin{document}
+\maketitle
+
+
+% ----------------------------------------------------------------------------------------
+%	LIST OF CONTENTS/FIGURES/TABLES PAGES
+% ----------------------------------------------------------------------------------------
+
+\begin{singlespace}
+  \tableofcontents
+\end{singlespace}
+
+\cleardoublepage
+\pagenumbering{arabic}
+
+\chapter*{Introducción}
+\addcontentsline{toc}{chapter}{Introducción}
+
+Como aporte para la empresa Negocios Asociados S. A se ha desarrollado el presente trabajo con la finalidad de colaborar con el correcto desempeño de las labores cotidianas de los empleados que hacen uso de los sistemas de información y brindar apoyo que permita conocer las condiciones de funcionalidad de los servidores que brindan sus diferentes servicios para que los empleados puedan realizar sus labores cotidianas.
+
+La empresa se dedica a comercializar productos eléctricos de baja, media y alta tensión, es una empresa regional que cuenta con muchas sucursales en la región Centroamericana, debido a esto tiene diseminado por la región muchos servidores con mucha información valiosa, pero nuestro trabajo se enfocara en una de las sucursales que se llama “Electrobodegas”, donde se encuentra centralizada mucha información y la mayoría del personal administrativo con que cuenta la empresa.
+
+En la empresa se encuentran funcionando muchos servidores y algunos de ellos presentan algún tipo de dificultad y que expondremos a los miembros del equipo de IT de la empresa para que tomen en consideración nuestro estudio sobre los recursos con los que actualmente cuenta la empresa y que se tienen pensado llevarse a un ambiente virtual.
+
+\chapter{Descripción del proyecto de investigación}
+
+\section{Objetivos}
+
+\subsection{Objetivo General}
+
+Aportar a la empresa Negocios Asociados S. A. un análisis de los servidores que se podrían virtualizar, propuestos por la empresa, en el cual se estudiaran las características y especificaciones técnicas de cada uno y que arrojará los resultados para saber si estos pueden ser llevados a un ambiente virtual.
+
+
+\subsection{Objetivos Específicos}
+
+\begin{itemize}
+\item Implementar herramientas de diagnóstico en los servidores escogidos que brinden la información necesaria para el análisis que arrojara los resultados necesarios para saber qué clase de equipos Negocios Asociados S. A. podría adquirir.
+
+\item Diagnosticar y hacer observaciones sobre cualquier mal funcionamiento o irregularidad  que se encuentre durante el estudio de los equipos para posteriormente hacer recomendaciones sobre estos para así evitar futuras fallas que comprometan el funcionamiento de los servidores.
+
+\item Presentar propuestas sobre la optimización de los recursos de los servidores que se van a convertir a máquinas virtuales para así aprovechar mejor los equipos tecnológicos que la empresa va adquirir.
+\end{itemize}
+
+\pagebreak
+
+\section{Alcances y limitantes}
+
+\subsection{Alcances}
+
+\begin{itemize}
+\item Recolectar la información necesaria sobre uso de recursos de entrada y salida de periféricos principales como memoria RAM, disco duros y procesador, así como uso de la red de los servidores que se podrían virtualizar.
+
+\item Analizar el funcionamiento actual de los servidores y verificar posibles fallas que estos pudiesen tener como falta de recursos, aplicaciones ligadas a cierto software que el servidor utiliza o si hay un gran tráfico de red.
+
+\item Crear una propuesta de hardware de los servidores que serán virtualizados para estos no sufran de falta de recursos o desperdicio de estos y que tecnología de virtualización les beneficiaría.
+\end{itemize}
+
+\subsection{Limitantes}
+
+\begin{itemize}
+\item Debe ser utilizada solo una herramientas de diagnostico para evitar que las herramientas de monitoreo gasten recursos en los servidores que se monitorearan.
+
+\item Se enfoca en aquellas aplicaciones o servicios que tienen más importancia en los servidores.
+
+\item Los recursos que serán recomendados serán aquellos que tienen
+  mayor relevancia para la creación de una máquina virtual (memoria RAM, procesador, discos duros, tarjetas de red) en los servidores seleccionados por la empresa Negocios Asociados S.A.
+\end{itemize}
+
+\pagebreak
+
+\section{Situación Problemática}
+
+La situación en la empresa es la siguiente:
+
+Como empresa han tomado la decisión de migrar algunos servidores a un ambiente virtualizado.
+
+Algunas de las razones por la que se desean implementar virtualización son:
+
+\begin{itemize}
+\item Uno de los servidores ya no cuenta con fuente redundante
+\item Problemas de espacio en almacenamiento
+\item No tiene soporte en discos duros, esto por que ya no se encuentran discos para este modelo de servidor.
+\item La información que se encuentra en el servidor es de vital importancia, ahí están las bases de datos de la empresa.
+\item Uno de los servidor tiene problemas similares, en este funcionan el
+  Active Directory, Servidor DHCP y servidor de aplicaciones.
+\end{itemize}
+
+\section{Justificación}
+%{\let\clearpage\relax\section{Justificación}}
+
+Muchas serian las ventajas que obtendría la empresa Negocios Asociados S. A. del proyecto que realizaremos.
+
+\begin{itemize}
+\item Conocimiento del rendimiento de sus servidores para la toma de decisiones.
+\item Redimensionar el disco duro del servidor al momento de una posible migración a un ambiente virtual.
+\item Optimizar el tamaño de la memoria ram para un mejor desempeño.
+\item La empresa Negocios Asociados S.A obtendrá nuevo hardware para llevar acabo el proceso de migración.
+\end{itemize}
+
+\clearpage
+
+\section{Cronograma de actividades}
+
+\includegraphics[width=\linewidth]{cronograma}
+
+\include{chapters/descripcion}
+\include{chapters/marcoteorico}
+
+\end{document}
